@@ -19,13 +19,3 @@ function migratoryBirds(arr) {
 
   return common;
 }
-
-// main
-
-process.stdin.on('')
-
-// const arr1 = [1, 4, 4, 4, 5, 3];
-
-console.log(migratoryBirds(arr1))
-
-// expected 4

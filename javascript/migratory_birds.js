@@ -1,4 +1,6 @@
-  function migratoryBirds(arr) {
+// Problem: https://www.hackerrank.com/challenges/migratory-birds/
+
+function migratoryBirds(arr) {
     let max = 0
     let birds = {}
     let common = null

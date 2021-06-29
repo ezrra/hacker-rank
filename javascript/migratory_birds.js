@@ -5,7 +5,7 @@ function migratoryBirds(arr) {
   let birds = {};
   let common = null;
 
-  for (let a = 0; a <= arr.length; a++) {
+  for (let a = 0; a < arr.length; a++) {
     const bird = arr[a];
     birds[bird] = birds[bird] ? birds[bird] + 1 : 1;
   }

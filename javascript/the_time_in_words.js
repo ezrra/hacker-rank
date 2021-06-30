@@ -76,7 +76,5 @@ process.stdin.resume();
 process.stdin.on('data', stdin => input += stdin);
 process.stdin.on('end', () => {
   const [hour, minutes] = input.trim().split(/\s+/)
-  console.log('hour', hour)
-  console.log('minutes', minutes)
   console.log('Result:', getTimeInText(hour, minutes));
 });

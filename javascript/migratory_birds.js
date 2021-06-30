@@ -27,6 +27,6 @@ let input = '';
 process.stdin.resume();
 process.stdin.on('data', stdin => input += stdin);
 process.stdin.on('end', () => {
-  input = input.split(/\s+/).map(Number);
+  input = input.trim().split(/\s+/).map(Number);
   console.log('Result:', migratoryBirds(input));
 });

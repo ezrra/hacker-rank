@@ -1,3 +1,5 @@
+// Problem: https://www.hackerrank.com/challenges/ctci-array-left-rotation/problem
+
 const ZERO = 0
 const QUARTER_PAST = 15
 const HALF = 30

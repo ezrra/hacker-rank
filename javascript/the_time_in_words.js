@@ -1,11 +1,9 @@
+// Problem: https://www.hackerrank.com/challenges/ctci-array-left-rotation/problem
+
 const ZERO = 0
 const QUARTER_PAST = 15
 const HALF = 30
 const QUARTER_TO = 45
-
-function main(h, m) {
-  return getTimeInText(h, m)
-}
 
 const getNumberInText = number => {
   const numbers = {
@@ -64,12 +62,19 @@ function getTimeInText (hour, minutes) {
       }
       if (minute < 60) {
         const minutes = Math.abs(getMinutesSubtraction(minute))
-        return `${getNumberInText(minutes)} minutes to ${getNumberInText(hour + 1)}`;
+        return `${getNumberInText(minutes)} minutes to ${getNumberInText(Number(hour) + 1)}`;
       }
       return 'N/A'
     }
   }
 }
 
-// run
-console.log(main(1, 23))
+// main
+let input = '';
+
+process.stdin.resume();
+process.stdin.on('data', stdin => input += stdin);
+process.stdin.on('end', () => {
+  const [hour, minutes] = input.trim().split(/\s+/)
+  console.log('Result:', getTimeInText(hour, minutes));
+});

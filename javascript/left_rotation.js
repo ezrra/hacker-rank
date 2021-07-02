@@ -1,7 +1,15 @@
-// https://www.hackerrank.com/challenges/ctci-array-left-rotation/problem
+// Problem: https://www.hackerrank.com/challenges/ctci-array-left-rotation/problem
 
 function rotLeft(a, d) {
   return [...a.slice(d), ...a.slice(0, d)]
 }
 
-console.log(rotLeft([1, 2, 3, 4, 5], 4))
+// main
+let input = '';
+
+process.stdin.resume();
+process.stdin.on('data', stdin => input += stdin);
+process.stdin.on('end', () => {
+  const [number, ...array] = input.trim().split(/\s+/)
+  console.log('Result:', rotLeft(array, number).join(' '));
+});

@@ -1,16 +1,22 @@
-// https://www.hackerrank.com/challenges/a-very-big-sum/problem
+// Problem: https://www.hackerrank.com/challenges/a-very-big-sum/problem
 
-function aVeryBigSum() {
+function aVeryBigSum(arr) {
   let result = 0
-  const length = ar.length
+  const length = arr.length
 
   for (let i = 0; i < length; i++) {
-    result = ar[i] + result
+    result = arr[i] + result
   }
   
   return result
 }
 
-// run
-const ar = [1000000001, 1000000002, 1000000003, 1000000004, 1000000005]
-aVeryBigSum(ar)
+// main
+let input = '';
+
+process.stdin.resume();
+process.stdin.on('data', stdin => input += stdin);
+process.stdin.on('end', () => {
+  input = input.trim().split(/\s+/).map(Number);
+  console.log('Result:', aVeryBigSum(input));
+});
